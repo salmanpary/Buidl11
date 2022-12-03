@@ -54,7 +54,31 @@ const res=await player_names.startGame(parseInt(startGameData.size), parseInt(st
           <input type="number" name="size" id="" placeholder='team size' onChange={changeHandler} />
           <input type="number" name="runmul" id="" placeholder='run multiplier' onChange={changeHandler} />
           <input type="number" name="wicketmul" id="" placeholder='wicket multiplier' onChange={changeHandler} />
-          <button onClick={StartGameHandler}>Start Game</button>
+          <button onClick={StartGameHandler}>Start Game</button> <br></br>
+          <button onClick={
+            async () => {
+              const player_names = await accountFn();
+              const res = await player_names.listPlayers();
+             for(var i=0;i<res.length;i++){
+              await player_names.setplayerStats([i,Math.floor(Math.random()*100), Math.floor(Math.random()*2+1),])
+             }
+             await player_names.gameStops();
+             
+              console.log("admin", res);
+            }
+          }>END Game</button>
+          <br></br>
+           <button onClick={
+            async () => {
+              const player_names = await accountFn();
+         await player_names.calculateTeamsScore();
+         alert("SUCESSFULLY COMPLETED")
+           
+             await player_names.gameStops();
+             
+              console.log("admin", res);
+            }
+          }>CALCULATE and distribute rewards</button>
         </div>
         <h1 className="text-center my-8 font-bold text-3xl">Admin</h1>
         {x.map((index) => {
