@@ -5,6 +5,6 @@ import Listdisplay from "../Components/Listdisplay";
 export default function Home() {
 
   return (
-   <div className=""></div>
+   <Listdisplay/>
   );
 }
