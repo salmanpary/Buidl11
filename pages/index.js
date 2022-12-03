@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
+import { abi, NFT_CONTRACT_ADDRESS } from "../constants";
 export default function Home() {
   const [walletConnected, setWalletConnected] = useState(false);
   const web3ModalRef = useRef();
