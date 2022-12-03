@@ -15,7 +15,9 @@ const x = [1,2]
     // if(startGameData.size==0){
     //   alert('please enter the size of the game')
     // }
-    console.log(startGameData)
+  
+    console.log([parseInt(startGameData.size),parseInt( startGameData.runmul),parseInt( startGameData.wicketmul)])
+    
   }
 
 

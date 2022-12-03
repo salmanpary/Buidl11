@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState } from "react";
 import { Contract, providers, utils } from "ethers";
 import Web3Modal from "web3modal";
@@ -77,7 +76,7 @@ setbuidle11(buidl11);
 
 const listPlayers = async () => {
 
-  const player_names= await buidl11.startGame(1,2,3);
+  const player_names= await buidl11.getAdmin();
   console.log("admin", player_names);
 };
 
@@ -113,7 +112,6 @@ const listPlayers = async () => {
   <button onClick={listPlayers}>List Players</button>
   <Listdisplay/>
   </div>; 
-
 
 
 }
