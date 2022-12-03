@@ -13,7 +13,7 @@ const Listdisplay = ({ players,finalPlayers,setFinalPlayers}) => {
     })
     
   }
-
+ 
   const addPLayers = (e)=>{
     if(selectedPlayers.length<11){
       setSelectedPlayers([...selectedPlayers,currentPlayer])
