@@ -75,7 +75,7 @@ setbuidle11(buidl11);
 
 const listPlayers = async () => {
 
-  const player_names= await buidl11.getAdmin();
+  const player_names= await buidl11.startGame(1,2,3);
   console.log("admin", player_names);
 };
 
