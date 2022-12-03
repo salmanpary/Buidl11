@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import Playeraddcard from './Playeraddcard';
 
-const Playersdisplay = () => {
+const Playersdisplay = (props) => {
      
     const players =[
         {name:"virat",id:1},
@@ -16,10 +16,10 @@ const Playersdisplay = () => {
       const [selected, setselected] = useState(0);
 
   return (
-    <div className="List">
-        <div className=' bg-cyan-300 w-[22rem]'>{selected}/11</div>
-        <div className="bg-slate-300  text-center w-[22rem] h-[32rem] mr-8 overflow-y-auto">
-            <h4>India</h4>
+    <div className="List h-screen ">
+        <div className='  w-[22rem] mx-8'>{selected}/11</div>
+        <div className="bg-slate-300  text-center w-[22rem] h-[32rem] mx-8 overflow-y-auto">
+            <h4>{props.Teamname}</h4>
             <div className="list-container ">
               {players.map((player) => {
                 return (
