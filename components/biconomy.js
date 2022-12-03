@@ -4,8 +4,10 @@ import { ethers } from "ethers";
 import { ChainId } from "@biconomy/core-types";
 import SocialLogin from "@biconomy/web3-auth";
 import SmartAccount from "@biconomy/smart-account";
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+
   const [provider, setProvider] = useState();
   const [account, setAccount] = useState();
   const [smartAccount, setSmartAccount] = useState(null);
@@ -87,6 +89,8 @@ const Home = () => {
       setScwAddress(context.baseWallet.getAddress());
       setSmartAccount(smartAccount);
       setScwLoading(false);
+
+      if (!scwLoading) { window.location.replace('/admin') }
     }
     if (!!provider && !!account) {
       setupSmartAccount();
