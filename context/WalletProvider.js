@@ -40,6 +40,7 @@ const Provider = ({children})=>{
             if(account==null){
                 web3Handler()
             }
+            loadcontract(signer)
         })
         const exposed = {
             account,

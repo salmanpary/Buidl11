@@ -1,11 +1,10 @@
-import { Contract, providers, utils } from "ethers";
-import React, { useState } from 'react'
-import Listdisplay from '../../Components/Listdisplay';
+
 import Web3Modal from "web3modal";
 import { ethers } from "ethers";
 import { abi, NFT_CONTRACT_ADDRESS } from "../../constants";
 import { useWalletContext } from '../../context/WalletProvider';
 import accountFn from "../../Components/Accountfn";
+
 function Admin() {
 
   const { buidl11 } = useWalletContext()
@@ -13,10 +12,13 @@ function Admin() {
   var players = ["helo"]
   const [finalPlayers, setFinalPlayers] = useState([])
 
+
   const [startGameData, setStartGameData] = useState({
     size: 0,
     runmul: 0,
     wicketmul: 0
+
+
   })
 
 

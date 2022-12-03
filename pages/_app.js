@@ -1,10 +1,14 @@
-import '../styles/globals.css'
-import { useWalletContext } from '../context/WalletProvider'
+import "../styles/globals.css";
+import "@biconomy/web3-auth/dist/src/style.css"
 
 function MyApp({ Component, pageProps }) {
-  return <useWalletContext>
-  <Component {...pageProps} />
-  </useWalletContext>
+  return (
+
+    
+        <Component {...pageProps} />
+  
+   
+  );
 }
 
-export default MyApp
+export default MyApp;
