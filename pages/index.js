@@ -3,6 +3,7 @@ import { Contract, providers, utils } from "ethers";
 import Web3Modal from "web3modal";
 import { abi, NFT_CONTRACT_ADDRESS } from "../constants";
 import { ethers } from "ethers";
+import Listdisplay from "../Components/Listdisplay";
 export default function Home() {
   const [account, setAccount] = useState(false);
   const [buidl11,setbuidle11] = useState({})
@@ -106,9 +107,10 @@ const listPlayers = async () => {
   }, []);
 
 
-  return <div className="text-5xl">
+  return <div>
 
   <button onClick={listPlayers}>List Players</button>
+  <Listdisplay/>
   </div>; 
 
 
