@@ -6,13 +6,22 @@
     border-inline-end: 5px solid rgb(31, 194, 200);
 }
 
-.card-container{
-    background: linear-gradient(185.91deg, rgba(211, 253, 232, 0.092) 29.07%, rgba(255, 255, 255, 0.12) 153.72%);
-    backdrop-filter: blur(23px);
-}
-
 
 .Playerbar{
     backdrop-filter: blur(100px);
     background-color: rgba(0, 0, 0, 0.104);
 }
+
+
+
+.card-blur{
+    background-color: rgba(0, 0, 0, 0.051);
+    backdrop-filter: blur(100px);
+}
+
+.card{
+    border: 1px solid rgba(0, 0, 0, 0.177);
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 8px 8px 30px 1px rgba(0, 0, 0, 0.262); 
+}
+
