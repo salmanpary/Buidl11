@@ -15,10 +15,10 @@ function SelectPlayers() {
   return (
 
     
-    <div className="flex justify-between overflow-hidden">
+    <div className="flex justify-between overflow-hidden container-1">
 
       
-      <div className="Navbar bg-slate-900 w-64"></div>
+      <div className="Navbar w-64"></div>
 
       <div className="h-screen flex flex-col ">
         <h1 className="text-center my-8 font-bold text-3xl">User</h1>
@@ -39,7 +39,7 @@ function SelectPlayers() {
         </div>
       </div>
 
-      <div className="Playerbar bg-slate-900 w-[28rem]">
+      <div className="Playerbar w-[28rem]">
         {allplayers.map((player) => {
           return <h2 className="text-white">{player.name}</h2>;
         })}

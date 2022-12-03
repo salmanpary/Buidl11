@@ -9,6 +9,7 @@ const Playeraddcard = (props) => {
     if(buttonstate == "Add")
      {
       setbuttonstate("X");
+      props.setselected(props.selected+1);
       let playerlist = props.selectedplayers;
       playerlist.push(props.name);
       props.setselectedplayers(playerlist);
@@ -16,6 +17,7 @@ const Playeraddcard = (props) => {
      }
      else{
       setbuttonstate("Add");
+      props.setselected(props.selected-1);
       let playerlist = props.selectedplayers;
       playerlist.pop();
       props.setselectedplayers(playerlist);
