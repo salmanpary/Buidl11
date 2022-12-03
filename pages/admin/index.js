@@ -1,11 +1,16 @@
 
 import React, { useState } from 'react'
 import Listdisplay from '../../Components/Listdisplay';
+import { useWalletContext } from '../../context/WalletProvider';
 function Admin() {
 const x = [1,2]
   var players = ["helo"]
   const [finalPlayers,setFinalPlayers ] = useState([])
 
+  const {account} = useWalletContext()
+
+  console.log(account)
+ 
   const [startGameData,setStartGameData] = useState({
     size:0,
     runmul:0,
