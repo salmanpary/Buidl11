@@ -2,7 +2,7 @@ import React from 'react'
 import Playercard from './Playercard';
 import { useState } from 'react';
 
-const Listdisplay = (props) => {
+const Listdisplay = ({players,setPlayers}) => {
 
     function addItem1() {
         if(selected1 == 11)
@@ -17,6 +17,7 @@ const Listdisplay = (props) => {
           credits: Math.floor(Math.random() * 10),
         };
         setplayers1((players1) => [...players1, player1]);
+        
       }
 
       const [input1, setinput1] = useState("");
@@ -41,6 +42,7 @@ const Listdisplay = (props) => {
                 );
               })}
             </div>
+            <button>Submit</button>
           </div>
     </div>
   )
