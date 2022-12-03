@@ -2,26 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-.player-selected{
-    border-inline-end: 5px solid rgb(31, 194, 200);
+.player-selected {
+  border-inline-end: 5px solid rgb(255, 255, 255);
+  color:white;
 }
 
-
-.Playerbar{
-    backdrop-filter: blur(100px);
-    background-color: rgba(0, 0, 0, 0.104);
+.Playerbar {
+  backdrop-filter: blur(100px);
+  background-color: rgba(0, 0, 0, 0.104);
 }
 
-
-
-.card-blur{
-    background-color: rgba(0, 0, 0, 0.051);
-    backdrop-filter: blur(100px);
+.card-blur {
+  background-color: rgba(0, 0, 0, 0.051);
+  backdrop-filter: blur(80px);
 }
 
-.card{
-    border: 1px solid rgba(0, 0, 0, 0.177);
-    background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 8px 8px 30px 1px rgba(0, 0, 0, 0.262); 
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.059);
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 8px 8px 30px 1px rgba(0, 0, 0, 0.262);
+  box-shadow: inset 3px 3px 23px rgba(255, 255, 255, 0.06),
+    inset -3px -3px 35px rgba(0, 0, 0, 0.16);
+    
 }
+
+.faded{
+    background-color: rgba(0, 0, 0, 0.384);
+}
+
+.faded-light{
+    background-color: rgba(0, 0, 0, 0.181);
+}
+
 

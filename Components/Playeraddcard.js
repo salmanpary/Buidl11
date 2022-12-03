@@ -3,8 +3,6 @@ import { useState } from 'react';
 
 const Playeraddcard = (props) => {
 
-  let playerlist =[];
-
   function addtolist(){
     if(buttonstate == "Add")
      {
@@ -28,12 +26,12 @@ const Playeraddcard = (props) => {
   const [buttonstate, setbuttonstate] = useState("Add");
 
   return (
-    <div className={"flex justify-between bg-blue-200 my-4 p-2 mx-2 rounded-2xl " + (buttonstate =="X"?'player-selected':'')}>
-        <div className='Details'>
-        <h2 className='font-medium text-xl ml-2'>{props.name}</h2>
-        <h4>{props.credits}</h4>
+    <div className={"event-card w-[24rem] h-16 card-blur card  rounded-2xl flex justify-between items-center p-2 text-white mb-4" + (buttonstate =="X"?'player-selected':'')}>
+        <div className='Details flex gap-8 items-center  '>
+        <h2 className='font-bold text-2xl ml-2 capitalize'>{props.name}</h2>
+        <h4 className='font-bold  text- opacity-50 xl'>{props.credits}</h4>
         </div>
-        <button className='bg-gray-600 text-white p-2 rounded-xl w-14'
+        <button className=' text-white p-2 rounded-xl w-14 h-12'
         onClick={addtolist}>{buttonstate}</button>
     </div>
   )

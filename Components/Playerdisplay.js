@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState , useEffect} from 'react';
 import Playeraddcard from './Playeraddcard';
+import Progressbar from './Progressbar';
 
 const Playersdisplay = (props) => {
      
@@ -20,10 +21,11 @@ const Playersdisplay = (props) => {
 
   return (
     <div className="List h-screen ">
-        <div className='  w-[22rem] mx-8'>{selected}/11</div>
-        <div className="card-container rounded-2xl text-center w-[22rem] h-[32rem] mx-8 overflow-y-auto">
-            <h4>{props.Teamname}</h4>
-            <div className="list-container ">
+        <div className='  mx-8  text-white font-bold text-xl'></div>
+        <div className="card-container rounded-2xl w-[26rem] h-[32rem] mx-8 overflow-y-auto">
+            <h4 className='text-center text-white font-bold text-2xl'>{props.Teamname}</h4>
+            <Progressbar value = {selected}/>
+            <div className="list-container mt-8">
               {players.map((player) => {
                 return (
                   <Playeraddcard  name = {player.name} 
@@ -35,7 +37,7 @@ const Playersdisplay = (props) => {
                 );
               })}
             </div>
-            <button>Submit</button>
+            <button className='text-center text-white font-bold text-xl card-blur p-2 px-4 rounded-2xl'>Submit</button>
           </div>
     </div>
   )
