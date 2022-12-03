@@ -361,18 +361,14 @@ contract BUIDL11 {
         );
 
         string memory playersList = "";
+        
         for (uint256 i = 0; i < players.length; i++) {
-            playersList = string(abi.encodePacked(playersList, "Player ID: "));
-            playersList = string(
-                abi.encodePacked(playersList, uint2str(players[i].id))
-            );
-            playersList = string(
-                abi.encodePacked(playersList, "; Player Name: ")
-            );
+         
+          
             playersList = string(
                 abi.encodePacked(playersList, players[i].name)
             );
-            playersList = string(abi.encodePacked(playersList, "\n"));
+            playersList = string(abi.encodePacked(playersList, ","));
         }
         return playersList;
     }

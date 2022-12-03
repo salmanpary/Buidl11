@@ -8,6 +8,8 @@ module.exports = {
   solidity: "0.8.7",
   networks: {
     goerli: {
+      gas: 2100000,
+      gasPrice: 8000000000,
       url: "https://distinguished-quaint-vineyard.ethereum-goerli.discover.quiknode.pro/bef4723bd4314a71d90afc8e5d279aaec1acb4af/",
       // url: '127.0.0.1',
       accounts: [
