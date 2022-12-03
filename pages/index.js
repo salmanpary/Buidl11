@@ -1,6 +1,21 @@
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
 
-export default function Home() {
-  // init wallet
+const Index = () => {
+  const SocialLoginDynamic = dynamic(
+    () => import("../components/biconomy").then((res) => res.default),
+    {
+      ssr: false,
+    }
+  );
 
-  return <div className="text-5xl">Wagmi</div>;
-}
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <SocialLoginDynamic />
+      </Suspense>
+    </div>
+  );
+};
+
+export default Index;
