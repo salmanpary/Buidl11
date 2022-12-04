@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Listdisplay from '../../Components/Listdisplay';
+import Navbar from '../../Components/Navbar';
+
 function Addplayers() {
 const x = [1,2]
   var players = ["helo"]
@@ -24,7 +26,11 @@ const x = [1,2]
   }
   return ( 
     <div className="">
+       <img className="absolute h-screen w-screen -z-10 " src="/bg.jpg"/>
       <div className="h-screen flex flex-col">
+      <div className="Navbar min-w-[22rem] card-blur">
+         <Navbar/>
+        </div>
       <div className="">
 
       <input type="number" name="size" id="" placeholder='team size' onChange={changeHandler}/>
@@ -47,11 +53,6 @@ const x = [1,2]
         })}
       
     </div>
-    {players.length} <br />
-    {finalPlayers.length}
-     {finalPlayers.map((player)=>{
-      return <h3>poda {player}</h3>
-     })}
 
     </div>
   )
