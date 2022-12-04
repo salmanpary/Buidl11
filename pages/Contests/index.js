@@ -45,7 +45,7 @@ function SelectPlayers() {
         </div>
   
         <div className="h-screen flex flex-col ">
-          <h1 className="justify-start ml-12 my-12 font-semibold text-5xl text-white font-inter">Contests</h1>
+          <h1 className="justify-start ml-12 my-12 mt-8 font-semibold text-5xl text-white font-inter">Contests</h1>
           <div className=" Line h-[1px] w-[64rem] bg-white opacity-30 ml-12"></div>
           <div className="list-container ">
             <div className=" ">

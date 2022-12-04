@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className="flex flex-col h-screen">
-      <div className="text-white font-inter text-6xl ml-4 mt-8 mb-14 font-bold faded rounded-2xl p-4 mr-4  ">
+      <div className="text-white font-inter text-6xl ml-4 mt-4 mb-14 font-bold faded rounded-2xl p-4 mr-4  ">
         <span>Buidl 11</span>
       </div>
       <div className="routes h-[32rem] w-full flex flex-col gap-6 ml-6 ">
