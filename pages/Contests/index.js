@@ -1,3 +1,4 @@
+import Navbar from "../../Components/Navbar";
 
 
 function SelectPlayers() {
@@ -35,24 +36,28 @@ function SelectPlayers() {
 
  
   return (
-    <div>
-       <img className="absolute h-screen w-screen -z-10" src="/bg.jpg"/>
+    <div className="font-inter">
+       <img className="absolute h-screen w-screen -z-10 " src="/bg.jpg"/>
       <div className="flex overflow-hidden container-1 card-blur ">
         
         <div className="Navbar min-w-[22rem] card-blur">
-  
+         <Navbar/>
         </div>
   
         <div className="h-screen flex flex-col ">
-          <h1 className="justify-start ml-12 my-16 font-bold text-6xl text-white">Contests</h1>
+          <h1 className="justify-start ml-12 my-12 mt-8 font-semibold text-5xl text-white font-inter">Contests</h1>
+          <div className=" Line h-[1px] w-[64rem] bg-white opacity-30 ml-12"></div>
           <div className="list-container ">
-            <h2 className=" mt-8 mb-8 ml-12 text-white font-bold text-2xl">Select a contest to join</h2>
+            <div className=" ">
+            <h2 className=" mt-8 mb-2 ml-12 text-white font-bold font-inter text-2xl">Select a contest to join</h2>
+            </div>
+            
             <div className=" flex flex-wrap ml-12">
               {events.map((event) => {
                 return (
-                  <div className="event-card w-[24rem] h-40 card-blur card my-6 mr-8 rounded-2xl flex justify-between">
+                  <div className="event-card w-[30rem] h-48 card-blur card my-6 mr-8 rounded-2xl flex justify-between">
                     <div className="left flex flex-col ml-3 mt-2">
-                      <span className="font-semibold text-white my-2 mx-1">{event.name}</span>
+                      <span className="font-semibold text-white my-2 mx-1 text-3xl">{event.name}</span>
                       <span className="text-white font-bold m-1">{event.winnings}</span>
                       <span className="text-white font-medium m-1">{event.spotsleft} Spots left</span>
                       <span className="text-white font-medium m-1">{event.date}</span>

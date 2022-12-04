@@ -20,8 +20,16 @@
 }
 
 .card{
-    border: 1px solid rgba(0, 0, 0, 0.177);
+    border-left: 1px  solid rgba(255, 255, 255, 0.150);
+    border-top: 1px  solid rgba(255, 255, 255, 0.150);
     background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 8px 8px 30px 1px rgba(0, 0, 0, 0.262); 
+    box-shadow: 8px 8px 40px 1px rgba(0, 0, 0, 0.359); 
 }
 
+.faded{
+    background-color: rgba(0, 0, 0, 0.300);
+}
+
+.faded-light{
+    background-color: rgba(0, 0, 0, 0.150);
+}

@@ -1,8 +1,9 @@
 import React from 'react'
 import Playercard from './Playercard';
 import { useState } from 'react';
+import Progressbar from './Progressbar';
 
-const Listdisplay = ({ players,finalPlayers,setFinalPlayers}) => {
+const Listdisplay = ({ players,finalPlayers,setFinalPlayers,teamname}) => {
   const [selectedPlayers,setSelectedPlayers] = useState([])
   const [currentPlayer,setCurrentPlayer]= useState({name:'',jerseyNo:''})
 
@@ -37,24 +38,29 @@ const Listdisplay = ({ players,finalPlayers,setFinalPlayers}) => {
   }
 
   return (
-    <div className="List">
-      <div className=' bg-cyan-300 w-[22rem]'>{selectedPlayers.length}/11</div>
-      <div className="bg-slate-300  text-center w-[22rem] h-[32rem] mr-8 overflow-y-auto">
-        <h4>India</h4>
+    <div className="List ml-8  overflow-hidden" >
+      <div className='w-[26rem] mb-2'>
+      <Progressbar value = {selectedPlayers.length}/>
+      </div>
+      
+      <div className=" text-center w-[22rem] h-[32rem] mr-8 overflow-y-auto overflow-x-hidden card-blur faded rounded-xl p-4">
+      <h4 className='text-white  text-left font-bold text-3xl mb-4  ml-2'> Team : {teamname}</h4>
+      <div className=" Line h-[1px] w-[19rem] bg-white opacity-30 ml-2 m-4"></div>
         <input
           type="text"
           placeholder="Player Name"
           onChange={(e)=>handleChange(e)}
+          className="rounded-xl p-2 card-blur text-white opacity-60  -ml-10"
         ></input>
-        <button onClick={addPLayers}>Add</button>
-        <div className="list-container ">
+        <button  className='mx-2 text-white font-bold faded p-2 px-3 rounded-xl' onClick={addPLayers}>Add</button>
+        <div className="list-container text-white my-4 ">
           {selectedPlayers.map((player) => {
             return (
-              <Playercard name={player.name} credits={player.credits} />
+              <Playercard name={player.name} credits={Math.floor(Math.random()*3+7)} />
             );
           })}
         </div>
-        <button onClick={submitHandler}>Submit</button>
+        <button className='mx-2 text-white flex justify-start ml-2 text-xl font-bold faded p-1 px-12 my-4 rounded-xl' onClick={submitHandler}>Submit</button>
       </div>
     </div>
   )
