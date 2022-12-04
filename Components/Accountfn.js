@@ -1,6 +1,6 @@
 import { Contract, providers, utils } from "ethers";
 import React, { useState } from 'react'
-import Web3Modal from "web3modal";
+
 import { ethers } from "ethers";
 import { abi, NFT_CONTRACT_ADDRESS } from "../constants/index";
 

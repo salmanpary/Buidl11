@@ -5,7 +5,7 @@ import { ChainId } from "@biconomy/core-types";
 import SocialLogin from "@biconomy/web3-auth";
 import SmartAccount from "@biconomy/smart-account";
 import { useNavigate } from 'react-router-dom'
-
+import accountFn from "./Accountfn";
 const Home = () => {
 
   const [provider, setProvider] = useState();
@@ -41,6 +41,12 @@ const Home = () => {
     return socialLoginSDK;
   }, [socialLoginSDK]);
 
+
+  const admincheck = async () => {
+    const player_names = await accountFn();
+    const res = await player_names.getAdmin()
+    return res
+  }
   // if wallet already connected close widget
   useEffect(() => {
     console.log("hidelwallet");
@@ -89,14 +95,20 @@ const Home = () => {
       setScwAddress(context.baseWallet.getAddress());
       setSmartAccount(smartAccount);
       setScwLoading(false);
+      var acc = "0x58b23e375689343cdE61Bd77eCCe3490D033812E"
 
-      if (!scwLoading) { window.location.replace('/admin') }
+      if (!scwLoading) {
+        if (account == acc) window.location.replace('/admin')
+        else window.location.replace('/contests')
+      }
     }
     if (!!provider && !!account) {
       setupSmartAccount();
       console.log("Provider...", provider);
     }
   }, [account, provider]);
+
+
 
   return (
     <div className={styles.container}>

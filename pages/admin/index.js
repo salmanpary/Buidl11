@@ -1,9 +1,10 @@
 
-import Web3Modal from "web3modal";
 import { ethers } from "ethers";
 import { abi, NFT_CONTRACT_ADDRESS } from "../../constants";
 import { useWalletContext } from '../../context/WalletProvider';
 import accountFn from "../../Components/Accountfn";
+import { useState } from "react";
+import Listdisplay from "../../Components/Listdisplay";
 
 function Admin() {
 
@@ -21,20 +22,10 @@ function Admin() {
 
   })
 
-
-
   const StartGameHandler = async () => {
-    // if(startGameData.size==0){
-    //   alert('please enter the size of the game')
-    // }
-
-
-
-
-
 
     const player_names = await accountFn();
-const res=await player_names.startGame(parseInt(startGameData.size), parseInt(startGameData.runmul), parseInt(startGameData.wicketmul))
+    const res = await player_names.startGame(parseInt(startGameData.size), parseInt(startGameData.runmul), parseInt(startGameData.wicketmul))
     console.log("admin", res);
 
     console.log([parseInt(startGameData.size), parseInt(startGameData.runmul), parseInt(startGameData.wicketmul)])
@@ -61,23 +52,23 @@ const res=await player_names.startGame(parseInt(startGameData.size), parseInt(st
             async () => {
               const player_names = await accountFn();
               const res = await player_names.listPlayers();
-             for(var i=0;i<res.length;i++){
-              await player_names.setplayerStats([i,Math.floor(Math.random()*100), Math.floor(Math.random()*2+1),])
-             }
-             await player_names.gameStops();
-             
+              for (var i = 0; i < res.length; i++) {
+                await player_names.setplayerStats([i, Math.floor(Math.random() * 100), Math.floor(Math.random() * 2 + 1),])
+              }
+              await player_names.gameStops();
+
               console.log("admin", res);
             }
           }>END Game</button>
           <br></br>
-           <button onClick={
+          <button onClick={
             async () => {
               const player_names = await accountFn();
-         await player_names.calculateTeamsScore();
-         alert("SUCESSFULLY COMPLETED")
-           
-             await player_names.gameStops();
-             
+              await player_names.calculateTeamsScore();
+              alert("SUCESSFULLY COMPLETED")
+
+              await player_names.gameStops();
+
               console.log("admin", res);
             }
           }>CALCULATE and distribute rewards</button>
@@ -103,13 +94,13 @@ const res=await player_names.startGame(parseInt(startGameData.size), parseInt(st
         return <h3>poda {player}</h3>
       })}
 
-     <button onClick={async () => {
-      if(finalPlayers.length<startGameData.size){
-        alert('please select 11 players')
-      }
+      <button onClick={async () => {
+        if (finalPlayers.length < startGameData.size) {
+          alert('please select 11 players')
+        }
         const player_names = await accountFn();
         const res = await player_names.addPlayerToGame(finalPlayers)
-  console.log(res);
+        console.log(res);
       }}>Add Players to gamey</button>
 
 
