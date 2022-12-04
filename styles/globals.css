@@ -28,8 +28,12 @@
 
 .faded{
     background-color: rgba(0, 0, 0, 0.300);
+    
 }
 
 .faded-light{
     background-color: rgba(0, 0, 0, 0.150);
+}
+.faded2{
+    background-color: rgba(255, 255, 255, 0.178);
 }
