@@ -43,7 +43,7 @@ const Listdisplay = ({ players,finalPlayers,setFinalPlayers,teamname}) => {
       <Progressbar value = {selectedPlayers.length}/>
       </div>
       
-      <div className=" text-center w-[22rem] h-[32rem] mr-8 overflow-y-auto overflow-x-hidden card-blur faded rounded-xl p-4">
+      <div className=" text-center w-[22rem] h-[32rem] mr-8 overflow-y-scroll  overflow-x-hidden  card-blur faded rounded-xl p-4">
       <h4 className='text-white  text-left font-bold text-3xl mb-4  ml-2'> Team : {teamname}</h4>
       <div className=" Line h-[1px] w-[19rem] bg-white opacity-30 ml-2 m-4"></div>
         <input
