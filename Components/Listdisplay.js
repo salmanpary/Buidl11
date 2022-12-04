@@ -53,10 +53,10 @@ const Listdisplay = ({ players,finalPlayers,setFinalPlayers,teamname}) => {
           className="rounded-xl p-2 card-blur text-white opacity-60  -ml-10"
         ></input>
         <button  className='mx-2 text-white font-bold faded p-2 px-3 rounded-xl' onClick={addPLayers}>Add</button>
-        <div className="list-container ">
+        <div className="list-container text-white my-4 ">
           {selectedPlayers.map((player) => {
             return (
-              <Playercard name={player.name} credits={player.credits} />
+              <Playercard name={player.name} credits={Math.floor(Math.random()*3+7)} />
             );
           })}
         </div>
