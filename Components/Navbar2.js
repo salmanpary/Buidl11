@@ -6,9 +6,10 @@ const Navbar2 = (props) => {
 
   return (
     <div className='flex flex-col h-screen justify-start mt-20'>
-      <div className="text-white font-inter text-6xl ml-4 mt-4 mb-14 font-bold faded rounded-2xl p-4 mr-4  ">
-        <span>Buidl 11</span>
+      <div className="text-white font-inter text-6xl ml-4 -mt-16 mb-16 font-bold faded rounded-2xl p-4 mr-4  ">
+        <span >Buidl 11</span>
       </div>
+      <span className="text-white font-inter text-3xl ml-4 -mt-16 mb-16 font-bold faded rounded-2xl p-4 mr-4  ">Input fields to <br/><span className='text-red-600'>start game</span></span>
        <input
             type="number"
             name="size"

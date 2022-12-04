@@ -31,7 +31,7 @@ function Addplayers() {
           <Navbar2 changeHandler={changeHandler} StartGameHandler={StartGameHandler}/>
         </div>
         <div className="Right-section w-full card-blur">
-          <h1 className="text-white my-8 font-semibold ml-12 mr-12 text-3xl">Player Selection</h1>
+          <h1 className="text-white my-8 font-semibold ml-12 mr-12 text-5xl">Player Selection</h1>
           <div className=" Line h-[1px] w-[64rem] bg-white opacity-30 ml-12 mb-8"></div>
           <div className="flex justify-start ml-4">
           <Listdisplay
